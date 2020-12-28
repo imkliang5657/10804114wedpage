@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+<meta name="description" content="Web Tutorials">
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<meta name="author" content="Liang">
+
+<body>
+<h1>攝氏溫標 是世界上普遍使用的溫標，符號為°C，屬於公制單位。
+
+攝氏溫標的規定是：在標準大氣壓，純水的凝固點（即固液共存的溫度）為0°C，水的沸點為100°C，中間劃分為100等份，每等份為1°C。</h1>
+
+<h1>華氏溫標是一種溫標，符號為℉。華氏溫標的定義是：在標準大氣壓下，冰的熔點為32℉，水的沸點為212℉，中間有180等分，每等分為華氏1度。</h1>
+
+<H1>C = (F - 32) * 5/9</H1>
+<H1>F = 9/5 * C + 32 </H1>
+<form>
+請輸入攝氏溫度 : <input type="text" id="c">
+</form>
+<form>
+請輸入華氏溫度: <input type="text" id="f">
+</form>
+<form>
+請輸入城市名稱 : <input type="text" id="name">
+</form>
+<p id="攝氏轉換華氏">顯示區域</p>
+<button type="button" onclick="cal()">華氏轉換攝氏</button>
+<button type="button" onclick="fal()">攝氏轉換華氏</button>
+<img src= "https://www.crazy-tutorial.com/wp-content/uploads/2018/06/%E6%BA%AB%E5%BA%A6%E8%A8%88%E5%9C%96%E7%89%87-1200x628.jpg"width= "512" height="512" />
+<img src= "https://1.bp.blogspot.com/-UToaUmhEPDI/UR2bFa8hoOI/AAAAAAAAF08/Ef7onPiyLvM/s1600/%E6%94%9D%E6%B0%8F%E8%8F%AF%E6%B0%8F%E6%BA%AB%E5%BA%A6%E8%BD%89%E6%8F%9B%E8%A1%A8.jpg"width= "512" height="512" />
+<script>
+function cal(){
+var c = document.getElementById("c").value;
+var f = document.getElementById("f").value;
+var  ce=5/9*(f-32);
+document.getElementById("攝氏轉換華氏").innerHTML= ce;
+var name = document.getElementById("name").value;
+alert( document.getElementById("name").value+"的攝氏溫度是 " + ce);
+
+}
+function fal(){
+var c = document.getElementById("c").value;
+var f = document.getElementById("f").value;
+var  fe=9/5*c+32;
+document.getElementById("攝氏轉換華氏").innerHTML= fe;
+var name = document.getElementById("name").value;
+alert( document.getElementById("name").value+"的華氏溫度是 " + fe);
+
+}
+
+
+
+</script>
+</body>
+</html>
